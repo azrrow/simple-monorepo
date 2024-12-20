@@ -1,5 +1,5 @@
 {
-  "name": "with-svelte",
+  "name": "acme",
   "private": true,
   "scripts": {
     "build": "turbo run build",
