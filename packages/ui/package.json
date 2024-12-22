@@ -2,18 +2,24 @@
   "name": "@acme/ui",
   "version": "0.0.0",
   "type": "module",
-  "module": "index.ts",
-  "main": "index.ts",
-  "exports": {
-    ".": {
-      "types": "./index.ts",
-      "svelte": "./index.ts"
-    }
-  },
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint . && prettier --check . --ignore-path ../../.gitignore",
+    "format": "prettier --write ."
+  },
+  "exports": {
+    "./app.css": "./src/app.css",
+    "./postcss.config": "./postcss.config.mjs",
+    "./tailwind.config": "./tailwind.config.ts",
+    "./lib/*": "./src/lib/*",
+    "./lib/components/ui/*": "./src/lib/components/ui/*/index.ts"
   },
   "devDependencies": {
-    "svelte": "^4.2.12"
+    "clsx": "^2.1.1",
+    "svelte": "^4.2.12",
+    "tailwind-merge": "^2.5.5",
+    "tailwind-variants": "^0.3.0",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "catalog:"
   }
 }
