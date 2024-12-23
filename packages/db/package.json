@@ -12,7 +12,8 @@
         "dev": "tsc --watch",
         "generate": "drizzle-kit generate",
         "migrate": "pnpm run src/migrate.ts",
-        "studio": "drizzle-kit studio"
+        "studio": "drizzle-kit studio",
+        "codegen": "bun run src/codegen.ts"
     },
     "dependencies": {
         "drizzle-orm": "^0.38.0",
