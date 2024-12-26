@@ -41,6 +41,7 @@
 	},
 	"dependencies": {
 		"@inlang/paraglide-sveltekit": "^0.12.1",
+		"arctic": "^2.2.2",
 		"nanoid": "^5.0.9"
 	}
 }
