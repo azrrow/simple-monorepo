@@ -11,7 +11,7 @@
         "build": "tsc",
         "dev": "tsc --watch",
         "generate": "drizzle-kit generate",
-        "migrate": "pnpm run src/migrate.ts",
+        "migrate": "bun run src/migrate.ts",
         "studio": "drizzle-kit studio",
         "codegen": "bun run src/codegen.ts"
     },
