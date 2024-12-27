@@ -45,7 +45,13 @@ export async function GET(event: RequestEvent): Promise<Response> {
 
     const sessionStore = initializeSessionStore(event.platform?.env.SESSIONS!)
 
-    const { sessionToken, session } = await sessionStore.createSession(insertedUser[0][0].id);
+    const userId = insertedUser[0][0]?.id;
+
+    if (!userId) {
+        return new Response(null, { status: 400 });
+    }
+
+    const { sessionToken, session } = await sessionStore.createSession(userId);
 
     setSessionTokenCookie(event, sessionToken, new Date(session.expiresAt))
 
